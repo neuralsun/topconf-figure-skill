@@ -1,0 +1,3244 @@
+{
+  "version": 1,
+  "title": "Memory-guided multimodal architecture — illustrative example",
+  "canvas": {
+    "width": 1800,
+    "height": 760,
+    "background": "#FFFFFF",
+    "fontFamily": "Arial",
+    "minFontSize": 16
+  },
+  "nodes": [
+    {
+      "id": "panel-encoding",
+      "type": "roundrect",
+      "x": 20,
+      "y": 80,
+      "w": 460,
+      "h": 610,
+      "fill": "#F7FAFE",
+      "stroke": "#7FA5D0",
+      "strokeWidth": 1.6,
+      "radius": 14,
+      "z": 0
+    },
+    {
+      "id": "panel-memory",
+      "type": "roundrect",
+      "x": 500,
+      "y": 80,
+      "w": 300,
+      "h": 610,
+      "fill": "#F4FBF9",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.6,
+      "radius": 14,
+      "z": 0
+    },
+    {
+      "id": "panel-fusion",
+      "type": "roundrect",
+      "x": 820,
+      "y": 80,
+      "w": 710,
+      "h": 610,
+      "fill": "#FBF9FE",
+      "stroke": "#9A87C9",
+      "strokeWidth": 1.6,
+      "radius": 14,
+      "z": 0
+    },
+    {
+      "id": "panel-prediction",
+      "type": "roundrect",
+      "x": 1550,
+      "y": 80,
+      "w": 230,
+      "h": 610,
+      "fill": "#FFFCF5",
+      "stroke": "#D7AB55",
+      "strokeWidth": 1.6,
+      "radius": 14,
+      "z": 0
+    },
+    {
+      "id": "heading-a",
+      "type": "text",
+      "text": "(a) Multimodal encoding",
+      "x": 35,
+      "y": 96,
+      "w": 430,
+      "h": 44,
+      "fontSize": 28,
+      "bold": true,
+      "align": "center",
+      "color": "#243448",
+      "z": 40
+    },
+    {
+      "id": "heading-b",
+      "type": "text",
+      "text": "(b) Memory retrieval",
+      "x": 510,
+      "y": 96,
+      "w": 280,
+      "h": 44,
+      "fontSize": 26,
+      "bold": true,
+      "align": "center",
+      "color": "#243448",
+      "z": 40
+    },
+    {
+      "id": "heading-c",
+      "type": "text",
+      "text": "(c) Memory-guided fusion",
+      "x": 835,
+      "y": 96,
+      "w": 680,
+      "h": 44,
+      "fontSize": 28,
+      "bold": true,
+      "align": "center",
+      "color": "#243448",
+      "z": 40
+    },
+    {
+      "id": "heading-d",
+      "type": "text",
+      "text": "(d) Prediction",
+      "x": 1555,
+      "y": 96,
+      "w": 220,
+      "h": 44,
+      "fontSize": 28,
+      "bold": true,
+      "align": "center",
+      "color": "#243448",
+      "z": 40
+    },
+    {
+      "id": "image-label",
+      "type": "text",
+      "text": "Image patches",
+      "x": 35,
+      "y": 165,
+      "w": 145,
+      "h": 35,
+      "fontSize": 20,
+      "bold": true,
+      "align": "center",
+      "color": "#243448",
+      "z": 40
+    },
+    {
+      "id": "input-image",
+      "type": "rect",
+      "x": 45,
+      "y": 217,
+      "w": 120,
+      "h": 96,
+      "fill": "#E4F0F9",
+      "stroke": "#7FA5D0",
+      "strokeWidth": 1.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "sun",
+      "type": "ellipse",
+      "x": 130,
+      "y": 230,
+      "w": 18,
+      "h": 18,
+      "fill": "#EDD283",
+      "stroke": "none",
+      "strokeWidth": 1.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "mountains",
+      "type": "polygon",
+      "points": [
+        [
+          45,
+          293
+        ],
+        [
+          78,
+          253
+        ],
+        [
+          105,
+          282
+        ],
+        [
+          129,
+          260
+        ],
+        [
+          165,
+          299
+        ],
+        [
+          165,
+          313
+        ],
+        [
+          45,
+          313
+        ]
+      ],
+      "fill": "#A5C6B8",
+      "stroke": "#A5C6B8",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "vision-encoder",
+      "type": "roundrect",
+      "x": 210,
+      "y": 217,
+      "w": 137,
+      "h": 96,
+      "fill": "#E8F1FC",
+      "stroke": "#7FA5D0",
+      "strokeWidth": 1.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "vision-label",
+      "type": "text",
+      "text": "Vision\nencoder",
+      "x": 219,
+      "y": 232,
+      "w": 119,
+      "h": 66,
+      "fontSize": 25,
+      "bold": true,
+      "align": "center",
+      "color": "#243448",
+      "z": 40
+    },
+    {
+      "id": "visual-tokens-0",
+      "type": "roundrect",
+      "x": 376,
+      "y": 244,
+      "w": 15,
+      "h": 40,
+      "fill": "#A9C9EF",
+      "stroke": "#6D99C9",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "visual-tokens-1",
+      "type": "roundrect",
+      "x": 396,
+      "y": 244,
+      "w": 15,
+      "h": 40,
+      "fill": "#A9C9EF",
+      "stroke": "#6D99C9",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "visual-tokens-2",
+      "type": "roundrect",
+      "x": 416,
+      "y": 244,
+      "w": 15,
+      "h": 40,
+      "fill": "#A9C9EF",
+      "stroke": "#6D99C9",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "visual-tokens-3",
+      "type": "roundrect",
+      "x": 436,
+      "y": 244,
+      "w": 15,
+      "h": 40,
+      "fill": "#A9C9EF",
+      "stroke": "#6D99C9",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "visual-tokens-label",
+      "type": "text",
+      "text": "Visual tokens",
+      "x": 355,
+      "y": 190,
+      "w": 120,
+      "h": 35,
+      "fontSize": 20,
+      "bold": false,
+      "align": "center",
+      "color": "#243448",
+      "z": 40
+    },
+    {
+      "id": "text-input-label",
+      "type": "text",
+      "text": "Text sequence",
+      "x": 34,
+      "y": 432,
+      "w": 146,
+      "h": 35,
+      "fontSize": 20,
+      "bold": true,
+      "align": "center",
+      "color": "#243448",
+      "z": 40
+    },
+    {
+      "id": "input-text",
+      "type": "roundrect",
+      "x": 45,
+      "y": 480,
+      "w": 120,
+      "h": 92,
+      "fill": "#FFFFFF",
+      "stroke": "#7FA5D0",
+      "strokeWidth": 1.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "text-example",
+      "type": "text",
+      "text": "Describe\nthe scene",
+      "x": 53,
+      "y": 491,
+      "w": 104,
+      "h": 67,
+      "fontSize": 20,
+      "bold": false,
+      "align": "center",
+      "color": "#243448",
+      "z": 40
+    },
+    {
+      "id": "text-encoder",
+      "type": "roundrect",
+      "x": 210,
+      "y": 480,
+      "w": 137,
+      "h": 92,
+      "fill": "#F2EEFB",
+      "stroke": "#9A87C9",
+      "strokeWidth": 1.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "text-encoder-label",
+      "type": "text",
+      "text": "Text\nencoder",
+      "x": 220,
+      "y": 490,
+      "w": 117,
+      "h": 70,
+      "fontSize": 25,
+      "bold": true,
+      "align": "center",
+      "color": "#243448",
+      "z": 40
+    },
+    {
+      "id": "text-tokens-0",
+      "type": "roundrect",
+      "x": 376,
+      "y": 506,
+      "w": 15,
+      "h": 40,
+      "fill": "#CABAE8",
+      "stroke": "#9A87C9",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "text-tokens-1",
+      "type": "roundrect",
+      "x": 396,
+      "y": 506,
+      "w": 15,
+      "h": 40,
+      "fill": "#CABAE8",
+      "stroke": "#9A87C9",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "text-tokens-2",
+      "type": "roundrect",
+      "x": 416,
+      "y": 506,
+      "w": 15,
+      "h": 40,
+      "fill": "#CABAE8",
+      "stroke": "#9A87C9",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "text-tokens-3",
+      "type": "roundrect",
+      "x": 436,
+      "y": 506,
+      "w": 15,
+      "h": 40,
+      "fill": "#CABAE8",
+      "stroke": "#9A87C9",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "text-token-label",
+      "type": "text",
+      "text": "Text tokens",
+      "x": 355,
+      "y": 445,
+      "w": 120,
+      "h": 35,
+      "fontSize": 20,
+      "bold": false,
+      "align": "center",
+      "color": "#243448",
+      "z": 40
+    },
+    {
+      "id": "memory-bank-label",
+      "type": "text",
+      "text": "Memory bank",
+      "x": 520,
+      "y": 165,
+      "w": 260,
+      "h": 35,
+      "fontSize": 25,
+      "bold": true,
+      "align": "center",
+      "color": "#243448",
+      "z": 40
+    },
+    {
+      "id": "memory-slot-0-0-front",
+      "type": "polygon",
+      "points": [
+        [
+          542,
+          226
+        ],
+        [
+          576,
+          226
+        ],
+        [
+          576,
+          253
+        ],
+        [
+          542,
+          253
+        ]
+      ],
+      "fill": "#8BD1C6",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-0-0-top",
+      "type": "polygon",
+      "points": [
+        [
+          542,
+          226
+        ],
+        [
+          550,
+          218
+        ],
+        [
+          584,
+          218
+        ],
+        [
+          576,
+          226
+        ]
+      ],
+      "fill": "#C6EAE2",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-0-0-side",
+      "type": "polygon",
+      "points": [
+        [
+          576,
+          226
+        ],
+        [
+          584,
+          218
+        ],
+        [
+          584,
+          245
+        ],
+        [
+          576,
+          253
+        ]
+      ],
+      "fill": "#6BB5A9",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-0-1-front",
+      "type": "polygon",
+      "points": [
+        [
+          598,
+          226
+        ],
+        [
+          632,
+          226
+        ],
+        [
+          632,
+          253
+        ],
+        [
+          598,
+          253
+        ]
+      ],
+      "fill": "#8BD1C6",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-0-1-top",
+      "type": "polygon",
+      "points": [
+        [
+          598,
+          226
+        ],
+        [
+          606,
+          218
+        ],
+        [
+          640,
+          218
+        ],
+        [
+          632,
+          226
+        ]
+      ],
+      "fill": "#C6EAE2",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-0-1-side",
+      "type": "polygon",
+      "points": [
+        [
+          632,
+          226
+        ],
+        [
+          640,
+          218
+        ],
+        [
+          640,
+          245
+        ],
+        [
+          632,
+          253
+        ]
+      ],
+      "fill": "#6BB5A9",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-0-2-front",
+      "type": "polygon",
+      "points": [
+        [
+          654,
+          226
+        ],
+        [
+          688,
+          226
+        ],
+        [
+          688,
+          253
+        ],
+        [
+          654,
+          253
+        ]
+      ],
+      "fill": "#8BD1C6",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-0-2-top",
+      "type": "polygon",
+      "points": [
+        [
+          654,
+          226
+        ],
+        [
+          662,
+          218
+        ],
+        [
+          696,
+          218
+        ],
+        [
+          688,
+          226
+        ]
+      ],
+      "fill": "#C6EAE2",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-0-2-side",
+      "type": "polygon",
+      "points": [
+        [
+          688,
+          226
+        ],
+        [
+          696,
+          218
+        ],
+        [
+          696,
+          245
+        ],
+        [
+          688,
+          253
+        ]
+      ],
+      "fill": "#6BB5A9",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-0-3-front",
+      "type": "polygon",
+      "points": [
+        [
+          710,
+          226
+        ],
+        [
+          744,
+          226
+        ],
+        [
+          744,
+          253
+        ],
+        [
+          710,
+          253
+        ]
+      ],
+      "fill": "#8BD1C6",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-0-3-top",
+      "type": "polygon",
+      "points": [
+        [
+          710,
+          226
+        ],
+        [
+          718,
+          218
+        ],
+        [
+          752,
+          218
+        ],
+        [
+          744,
+          226
+        ]
+      ],
+      "fill": "#C6EAE2",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-0-3-side",
+      "type": "polygon",
+      "points": [
+        [
+          744,
+          226
+        ],
+        [
+          752,
+          218
+        ],
+        [
+          752,
+          245
+        ],
+        [
+          744,
+          253
+        ]
+      ],
+      "fill": "#6BB5A9",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-1-0-front",
+      "type": "polygon",
+      "points": [
+        [
+          542,
+          271
+        ],
+        [
+          576,
+          271
+        ],
+        [
+          576,
+          298
+        ],
+        [
+          542,
+          298
+        ]
+      ],
+      "fill": "#8BD1C6",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-1-0-top",
+      "type": "polygon",
+      "points": [
+        [
+          542,
+          271
+        ],
+        [
+          550,
+          263
+        ],
+        [
+          584,
+          263
+        ],
+        [
+          576,
+          271
+        ]
+      ],
+      "fill": "#C6EAE2",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-1-0-side",
+      "type": "polygon",
+      "points": [
+        [
+          576,
+          271
+        ],
+        [
+          584,
+          263
+        ],
+        [
+          584,
+          290
+        ],
+        [
+          576,
+          298
+        ]
+      ],
+      "fill": "#6BB5A9",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-1-1-front",
+      "type": "polygon",
+      "points": [
+        [
+          598,
+          271
+        ],
+        [
+          632,
+          271
+        ],
+        [
+          632,
+          298
+        ],
+        [
+          598,
+          298
+        ]
+      ],
+      "fill": "#8BD1C6",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-1-1-top",
+      "type": "polygon",
+      "points": [
+        [
+          598,
+          271
+        ],
+        [
+          606,
+          263
+        ],
+        [
+          640,
+          263
+        ],
+        [
+          632,
+          271
+        ]
+      ],
+      "fill": "#C6EAE2",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-1-1-side",
+      "type": "polygon",
+      "points": [
+        [
+          632,
+          271
+        ],
+        [
+          640,
+          263
+        ],
+        [
+          640,
+          290
+        ],
+        [
+          632,
+          298
+        ]
+      ],
+      "fill": "#6BB5A9",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-1-2-front",
+      "type": "polygon",
+      "points": [
+        [
+          654,
+          271
+        ],
+        [
+          688,
+          271
+        ],
+        [
+          688,
+          298
+        ],
+        [
+          654,
+          298
+        ]
+      ],
+      "fill": "#8BD1C6",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-1-2-top",
+      "type": "polygon",
+      "points": [
+        [
+          654,
+          271
+        ],
+        [
+          662,
+          263
+        ],
+        [
+          696,
+          263
+        ],
+        [
+          688,
+          271
+        ]
+      ],
+      "fill": "#C6EAE2",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-1-2-side",
+      "type": "polygon",
+      "points": [
+        [
+          688,
+          271
+        ],
+        [
+          696,
+          263
+        ],
+        [
+          696,
+          290
+        ],
+        [
+          688,
+          298
+        ]
+      ],
+      "fill": "#6BB5A9",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-1-3-front",
+      "type": "polygon",
+      "points": [
+        [
+          710,
+          271
+        ],
+        [
+          744,
+          271
+        ],
+        [
+          744,
+          298
+        ],
+        [
+          710,
+          298
+        ]
+      ],
+      "fill": "#8BD1C6",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-1-3-top",
+      "type": "polygon",
+      "points": [
+        [
+          710,
+          271
+        ],
+        [
+          718,
+          263
+        ],
+        [
+          752,
+          263
+        ],
+        [
+          744,
+          271
+        ]
+      ],
+      "fill": "#C6EAE2",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-1-3-side",
+      "type": "polygon",
+      "points": [
+        [
+          744,
+          271
+        ],
+        [
+          752,
+          263
+        ],
+        [
+          752,
+          290
+        ],
+        [
+          744,
+          298
+        ]
+      ],
+      "fill": "#6BB5A9",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-2-0-front",
+      "type": "polygon",
+      "points": [
+        [
+          542,
+          316
+        ],
+        [
+          576,
+          316
+        ],
+        [
+          576,
+          343
+        ],
+        [
+          542,
+          343
+        ]
+      ],
+      "fill": "#8BD1C6",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-2-0-top",
+      "type": "polygon",
+      "points": [
+        [
+          542,
+          316
+        ],
+        [
+          550,
+          308
+        ],
+        [
+          584,
+          308
+        ],
+        [
+          576,
+          316
+        ]
+      ],
+      "fill": "#C6EAE2",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-2-0-side",
+      "type": "polygon",
+      "points": [
+        [
+          576,
+          316
+        ],
+        [
+          584,
+          308
+        ],
+        [
+          584,
+          335
+        ],
+        [
+          576,
+          343
+        ]
+      ],
+      "fill": "#6BB5A9",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-2-1-front",
+      "type": "polygon",
+      "points": [
+        [
+          598,
+          316
+        ],
+        [
+          632,
+          316
+        ],
+        [
+          632,
+          343
+        ],
+        [
+          598,
+          343
+        ]
+      ],
+      "fill": "#8BD1C6",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-2-1-top",
+      "type": "polygon",
+      "points": [
+        [
+          598,
+          316
+        ],
+        [
+          606,
+          308
+        ],
+        [
+          640,
+          308
+        ],
+        [
+          632,
+          316
+        ]
+      ],
+      "fill": "#C6EAE2",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-2-1-side",
+      "type": "polygon",
+      "points": [
+        [
+          632,
+          316
+        ],
+        [
+          640,
+          308
+        ],
+        [
+          640,
+          335
+        ],
+        [
+          632,
+          343
+        ]
+      ],
+      "fill": "#6BB5A9",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-2-2-front",
+      "type": "polygon",
+      "points": [
+        [
+          654,
+          316
+        ],
+        [
+          688,
+          316
+        ],
+        [
+          688,
+          343
+        ],
+        [
+          654,
+          343
+        ]
+      ],
+      "fill": "#8BD1C6",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-2-2-top",
+      "type": "polygon",
+      "points": [
+        [
+          654,
+          316
+        ],
+        [
+          662,
+          308
+        ],
+        [
+          696,
+          308
+        ],
+        [
+          688,
+          316
+        ]
+      ],
+      "fill": "#C6EAE2",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-2-2-side",
+      "type": "polygon",
+      "points": [
+        [
+          688,
+          316
+        ],
+        [
+          696,
+          308
+        ],
+        [
+          696,
+          335
+        ],
+        [
+          688,
+          343
+        ]
+      ],
+      "fill": "#6BB5A9",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-2-3-front",
+      "type": "polygon",
+      "points": [
+        [
+          710,
+          316
+        ],
+        [
+          744,
+          316
+        ],
+        [
+          744,
+          343
+        ],
+        [
+          710,
+          343
+        ]
+      ],
+      "fill": "#8BD1C6",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-2-3-top",
+      "type": "polygon",
+      "points": [
+        [
+          710,
+          316
+        ],
+        [
+          718,
+          308
+        ],
+        [
+          752,
+          308
+        ],
+        [
+          744,
+          316
+        ]
+      ],
+      "fill": "#C6EAE2",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slot-2-3-side",
+      "type": "polygon",
+      "points": [
+        [
+          744,
+          316
+        ],
+        [
+          752,
+          308
+        ],
+        [
+          752,
+          335
+        ],
+        [
+          744,
+          343
+        ]
+      ],
+      "fill": "#6BB5A9",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.2,
+      "z": 12
+    },
+    {
+      "id": "memory-slots-note",
+      "type": "text",
+      "text": "key–value slots",
+      "x": 520,
+      "y": 360,
+      "w": 260,
+      "h": 30,
+      "fontSize": 20,
+      "bold": false,
+      "align": "center",
+      "color": "#607185",
+      "z": 40
+    },
+    {
+      "id": "retrieval",
+      "type": "roundrect",
+      "x": 535,
+      "y": 416,
+      "w": 230,
+      "h": 62,
+      "fill": "#CFEDE5",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "retrieval-label",
+      "type": "text",
+      "text": "Top-k retrieval",
+      "x": 545,
+      "y": 427,
+      "w": 210,
+      "h": 40,
+      "fontSize": 25,
+      "bold": true,
+      "align": "center",
+      "color": "#243448",
+      "z": 40
+    },
+    {
+      "id": "query-caption",
+      "type": "text",
+      "text": "query",
+      "x": 487,
+      "y": 462,
+      "w": 47,
+      "h": 30,
+      "fontSize": 16,
+      "bold": false,
+      "align": "center",
+      "color": "#7FA5D0",
+      "z": 40
+    },
+    {
+      "id": "retrieved-context-0",
+      "type": "roundrect",
+      "x": 575,
+      "y": 552,
+      "w": 24,
+      "h": 38,
+      "fill": "#86C9BC",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "retrieved-context-1",
+      "type": "roundrect",
+      "x": 606,
+      "y": 552,
+      "w": 24,
+      "h": 38,
+      "fill": "#86C9BC",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "retrieved-context-2",
+      "type": "roundrect",
+      "x": 637,
+      "y": 552,
+      "w": 24,
+      "h": 38,
+      "fill": "#86C9BC",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "retrieved-context-3",
+      "type": "roundrect",
+      "x": 668,
+      "y": 552,
+      "w": 24,
+      "h": 38,
+      "fill": "#86C9BC",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "retrieved-context-4",
+      "type": "roundrect",
+      "x": 699,
+      "y": 552,
+      "w": 24,
+      "h": 38,
+      "fill": "#86C9BC",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "context-label",
+      "type": "text",
+      "text": "Retrieved context",
+      "x": 525,
+      "y": 604,
+      "w": 250,
+      "h": 36,
+      "fontSize": 23,
+      "bold": true,
+      "align": "center",
+      "color": "#243448",
+      "z": 40
+    },
+    {
+      "id": "q-group",
+      "type": "roundrect",
+      "x": 849,
+      "y": 223,
+      "w": 119,
+      "h": 118,
+      "fill": "#F5F8FD",
+      "stroke": "#7FA5D0",
+      "strokeWidth": 1.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "q-label",
+      "type": "text",
+      "text": "Q",
+      "x": 860,
+      "y": 231,
+      "w": 97,
+      "h": 33,
+      "fontSize": 25,
+      "bold": true,
+      "align": "center",
+      "color": "#243448",
+      "z": 40
+    },
+    {
+      "id": "q-tokens-0",
+      "type": "roundrect",
+      "x": 863,
+      "y": 279,
+      "w": 17,
+      "h": 38,
+      "fill": "#A9C9EF",
+      "stroke": "#6D99C9",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "q-tokens-1",
+      "type": "roundrect",
+      "x": 885,
+      "y": 279,
+      "w": 17,
+      "h": 38,
+      "fill": "#A9C9EF",
+      "stroke": "#6D99C9",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "q-tokens-2",
+      "type": "roundrect",
+      "x": 907,
+      "y": 279,
+      "w": 17,
+      "h": 38,
+      "fill": "#A9C9EF",
+      "stroke": "#6D99C9",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "q-tokens-3",
+      "type": "roundrect",
+      "x": 929,
+      "y": 279,
+      "w": 17,
+      "h": 38,
+      "fill": "#A9C9EF",
+      "stroke": "#6D99C9",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "q-caption",
+      "type": "text",
+      "text": "visual + text",
+      "x": 842,
+      "y": 350,
+      "w": 135,
+      "h": 30,
+      "fontSize": 18,
+      "bold": false,
+      "align": "center",
+      "color": "#607185",
+      "z": 40
+    },
+    {
+      "id": "k-group",
+      "type": "roundrect",
+      "x": 849,
+      "y": 411,
+      "w": 119,
+      "h": 82,
+      "fill": "#E8F7F3",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "k-label",
+      "type": "text",
+      "text": "K",
+      "x": 857,
+      "y": 412,
+      "w": 103,
+      "h": 33,
+      "fontSize": 24,
+      "bold": true,
+      "align": "center",
+      "color": "#243448",
+      "z": 40
+    },
+    {
+      "id": "k-tokens-0",
+      "type": "roundrect",
+      "x": 862,
+      "y": 447,
+      "w": 18,
+      "h": 31,
+      "fill": "#86C9BC",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "k-tokens-1",
+      "type": "roundrect",
+      "x": 885,
+      "y": 447,
+      "w": 18,
+      "h": 31,
+      "fill": "#86C9BC",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "k-tokens-2",
+      "type": "roundrect",
+      "x": 908,
+      "y": 447,
+      "w": 18,
+      "h": 31,
+      "fill": "#86C9BC",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "k-tokens-3",
+      "type": "roundrect",
+      "x": 931,
+      "y": 447,
+      "w": 18,
+      "h": 31,
+      "fill": "#86C9BC",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "v-group",
+      "type": "roundrect",
+      "x": 849,
+      "y": 530,
+      "w": 119,
+      "h": 82,
+      "fill": "#E8F7F3",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "v-label",
+      "type": "text",
+      "text": "V",
+      "x": 857,
+      "y": 531,
+      "w": 103,
+      "h": 33,
+      "fontSize": 24,
+      "bold": true,
+      "align": "center",
+      "color": "#243448",
+      "z": 40
+    },
+    {
+      "id": "v-tokens-0",
+      "type": "roundrect",
+      "x": 862,
+      "y": 566,
+      "w": 18,
+      "h": 31,
+      "fill": "#86C9BC",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "v-tokens-1",
+      "type": "roundrect",
+      "x": 885,
+      "y": 566,
+      "w": 18,
+      "h": 31,
+      "fill": "#86C9BC",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "v-tokens-2",
+      "type": "roundrect",
+      "x": 908,
+      "y": 566,
+      "w": 18,
+      "h": 31,
+      "fill": "#86C9BC",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "v-tokens-3",
+      "type": "roundrect",
+      "x": 931,
+      "y": 566,
+      "w": 18,
+      "h": 31,
+      "fill": "#86C9BC",
+      "stroke": "#64A99E",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "attention-inset",
+      "type": "roundrect",
+      "x": 994,
+      "y": 176,
+      "w": 277,
+      "h": 227,
+      "fill": "#F7F4FD",
+      "stroke": "#9A87C9",
+      "strokeWidth": 1.6,
+      "radius": 12,
+      "z": 10,
+      "dash": true
+    },
+    {
+      "id": "attention-heading",
+      "type": "text",
+      "text": "Cross-attention",
+      "x": 1007,
+      "y": 184,
+      "w": 250,
+      "h": 35,
+      "fontSize": 23,
+      "bold": true,
+      "align": "center",
+      "color": "#243448",
+      "z": 40
+    },
+    {
+      "id": "attention-cell-0-0",
+      "type": "rect",
+      "x": 1045,
+      "y": 230,
+      "w": 26,
+      "h": 26,
+      "fill": "#8965BB",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-0-1",
+      "type": "rect",
+      "x": 1071,
+      "y": 230,
+      "w": 26,
+      "h": 26,
+      "fill": "#9D7DC8",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-0-2",
+      "type": "rect",
+      "x": 1097,
+      "y": 230,
+      "w": 26,
+      "h": 26,
+      "fill": "#B597D6",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-0-3",
+      "type": "rect",
+      "x": 1123,
+      "y": 230,
+      "w": 26,
+      "h": 26,
+      "fill": "#C6AFE2",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-0-4",
+      "type": "rect",
+      "x": 1149,
+      "y": 230,
+      "w": 26,
+      "h": 26,
+      "fill": "#D8CAED",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-0-5",
+      "type": "rect",
+      "x": 1175,
+      "y": 230,
+      "w": 26,
+      "h": 26,
+      "fill": "#EAE3F6",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-1-0",
+      "type": "rect",
+      "x": 1045,
+      "y": 256,
+      "w": 26,
+      "h": 26,
+      "fill": "#9D7DC8",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-1-1",
+      "type": "rect",
+      "x": 1071,
+      "y": 256,
+      "w": 26,
+      "h": 26,
+      "fill": "#8965BB",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-1-2",
+      "type": "rect",
+      "x": 1097,
+      "y": 256,
+      "w": 26,
+      "h": 26,
+      "fill": "#9D7DC8",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-1-3",
+      "type": "rect",
+      "x": 1123,
+      "y": 256,
+      "w": 26,
+      "h": 26,
+      "fill": "#B597D6",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-1-4",
+      "type": "rect",
+      "x": 1149,
+      "y": 256,
+      "w": 26,
+      "h": 26,
+      "fill": "#C6AFE2",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-1-5",
+      "type": "rect",
+      "x": 1175,
+      "y": 256,
+      "w": 26,
+      "h": 26,
+      "fill": "#D8CAED",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-2-0",
+      "type": "rect",
+      "x": 1045,
+      "y": 282,
+      "w": 26,
+      "h": 26,
+      "fill": "#B597D6",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-2-1",
+      "type": "rect",
+      "x": 1071,
+      "y": 282,
+      "w": 26,
+      "h": 26,
+      "fill": "#9D7DC8",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-2-2",
+      "type": "rect",
+      "x": 1097,
+      "y": 282,
+      "w": 26,
+      "h": 26,
+      "fill": "#8965BB",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-2-3",
+      "type": "rect",
+      "x": 1123,
+      "y": 282,
+      "w": 26,
+      "h": 26,
+      "fill": "#9D7DC8",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-2-4",
+      "type": "rect",
+      "x": 1149,
+      "y": 282,
+      "w": 26,
+      "h": 26,
+      "fill": "#B597D6",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-2-5",
+      "type": "rect",
+      "x": 1175,
+      "y": 282,
+      "w": 26,
+      "h": 26,
+      "fill": "#C6AFE2",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-3-0",
+      "type": "rect",
+      "x": 1045,
+      "y": 308,
+      "w": 26,
+      "h": 26,
+      "fill": "#C6AFE2",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-3-1",
+      "type": "rect",
+      "x": 1071,
+      "y": 308,
+      "w": 26,
+      "h": 26,
+      "fill": "#B597D6",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-3-2",
+      "type": "rect",
+      "x": 1097,
+      "y": 308,
+      "w": 26,
+      "h": 26,
+      "fill": "#9D7DC8",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-3-3",
+      "type": "rect",
+      "x": 1123,
+      "y": 308,
+      "w": 26,
+      "h": 26,
+      "fill": "#8965BB",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-3-4",
+      "type": "rect",
+      "x": 1149,
+      "y": 308,
+      "w": 26,
+      "h": 26,
+      "fill": "#9D7DC8",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-3-5",
+      "type": "rect",
+      "x": 1175,
+      "y": 308,
+      "w": 26,
+      "h": 26,
+      "fill": "#B597D6",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-4-0",
+      "type": "rect",
+      "x": 1045,
+      "y": 334,
+      "w": 26,
+      "h": 26,
+      "fill": "#D8CAED",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-4-1",
+      "type": "rect",
+      "x": 1071,
+      "y": 334,
+      "w": 26,
+      "h": 26,
+      "fill": "#C6AFE2",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-4-2",
+      "type": "rect",
+      "x": 1097,
+      "y": 334,
+      "w": 26,
+      "h": 26,
+      "fill": "#B597D6",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-4-3",
+      "type": "rect",
+      "x": 1123,
+      "y": 334,
+      "w": 26,
+      "h": 26,
+      "fill": "#9D7DC8",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-4-4",
+      "type": "rect",
+      "x": 1149,
+      "y": 334,
+      "w": 26,
+      "h": 26,
+      "fill": "#8965BB",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-4-5",
+      "type": "rect",
+      "x": 1175,
+      "y": 334,
+      "w": 26,
+      "h": 26,
+      "fill": "#9D7DC8",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-5-0",
+      "type": "rect",
+      "x": 1045,
+      "y": 360,
+      "w": 26,
+      "h": 26,
+      "fill": "#EAE3F6",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-5-1",
+      "type": "rect",
+      "x": 1071,
+      "y": 360,
+      "w": 26,
+      "h": 26,
+      "fill": "#D8CAED",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-5-2",
+      "type": "rect",
+      "x": 1097,
+      "y": 360,
+      "w": 26,
+      "h": 26,
+      "fill": "#C6AFE2",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-5-3",
+      "type": "rect",
+      "x": 1123,
+      "y": 360,
+      "w": 26,
+      "h": 26,
+      "fill": "#B597D6",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-5-4",
+      "type": "rect",
+      "x": 1149,
+      "y": 360,
+      "w": 26,
+      "h": 26,
+      "fill": "#9D7DC8",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "attention-cell-5-5",
+      "type": "rect",
+      "x": 1175,
+      "y": 360,
+      "w": 26,
+      "h": 26,
+      "fill": "#8965BB",
+      "stroke": "#FFFFFF",
+      "strokeWidth": 0.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "matrix-note",
+      "type": "text",
+      "text": "attention weights",
+      "x": 1030,
+      "y": 412,
+      "w": 205,
+      "h": 32,
+      "fontSize": 19,
+      "bold": false,
+      "align": "center",
+      "color": "#607185",
+      "z": 40
+    },
+    {
+      "id": "attend-product",
+      "type": "ellipse",
+      "x": 1155,
+      "y": 480,
+      "w": 44,
+      "h": 44,
+      "fill": "#FFFFFF",
+      "stroke": "#9A87C9",
+      "strokeWidth": 1.6,
+      "radius": 12,
+      "z": 29
+    },
+    {
+      "id": "attend-product-symbol",
+      "type": "text",
+      "text": "×",
+      "x": 1157,
+      "y": 482,
+      "w": 40,
+      "h": 40,
+      "fontSize": 30,
+      "bold": false,
+      "align": "center",
+      "color": "#243448",
+      "z": 40
+    },
+    {
+      "id": "attended-tokens-0",
+      "type": "roundrect",
+      "x": 1300,
+      "y": 295,
+      "w": 22,
+      "h": 49,
+      "fill": "#C4B1E5",
+      "stroke": "#9A87C9",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "attended-tokens-1",
+      "type": "roundrect",
+      "x": 1328,
+      "y": 295,
+      "w": 22,
+      "h": 49,
+      "fill": "#C4B1E5",
+      "stroke": "#9A87C9",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "attended-tokens-2",
+      "type": "roundrect",
+      "x": 1356,
+      "y": 295,
+      "w": 22,
+      "h": 49,
+      "fill": "#C4B1E5",
+      "stroke": "#9A87C9",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "attended-tokens-3",
+      "type": "roundrect",
+      "x": 1384,
+      "y": 295,
+      "w": 22,
+      "h": 49,
+      "fill": "#C4B1E5",
+      "stroke": "#9A87C9",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "attended-tokens-4",
+      "type": "roundrect",
+      "x": 1412,
+      "y": 295,
+      "w": 22,
+      "h": 49,
+      "fill": "#C4B1E5",
+      "stroke": "#9A87C9",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "attended-tokens-label",
+      "type": "text",
+      "text": "Attended tokens",
+      "x": 1283,
+      "y": 239,
+      "w": 188,
+      "h": 38,
+      "fontSize": 22,
+      "bold": true,
+      "align": "center",
+      "color": "#243448",
+      "z": 40
+    },
+    {
+      "id": "residual-add",
+      "type": "ellipse",
+      "x": 1250,
+      "y": 558,
+      "w": 42,
+      "h": 42,
+      "fill": "#FFFFFF",
+      "stroke": "#9A87C9",
+      "strokeWidth": 1.6,
+      "radius": 12,
+      "z": 29
+    },
+    {
+      "id": "residual-plus",
+      "type": "text",
+      "text": "+",
+      "x": 1252,
+      "y": 560,
+      "w": 38,
+      "h": 38,
+      "fontSize": 28,
+      "bold": false,
+      "align": "center",
+      "color": "#243448",
+      "z": 40
+    },
+    {
+      "id": "residual-label",
+      "type": "text",
+      "text": "Visual-token residual",
+      "x": 700,
+      "y": 718,
+      "w": 520,
+      "h": 33,
+      "fontSize": 19,
+      "bold": false,
+      "align": "center",
+      "color": "#7FA5D0",
+      "z": 40
+    },
+    {
+      "id": "feed-forward",
+      "type": "roundrect",
+      "x": 1330,
+      "y": 546,
+      "w": 169,
+      "h": 66,
+      "fill": "#E4DAF6",
+      "stroke": "#9A87C9",
+      "strokeWidth": 1.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "feed-forward-label",
+      "type": "text",
+      "text": "Feed-forward",
+      "x": 1340,
+      "y": 561,
+      "w": 149,
+      "h": 34,
+      "fontSize": 23,
+      "bold": true,
+      "align": "center",
+      "color": "#243448",
+      "z": 40
+    },
+    {
+      "id": "fused-tokens-0",
+      "type": "roundrect",
+      "x": 1358,
+      "y": 626,
+      "w": 20,
+      "h": 26,
+      "fill": "#BCA6E0",
+      "stroke": "#9A87C9",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "fused-tokens-1",
+      "type": "roundrect",
+      "x": 1383,
+      "y": 626,
+      "w": 20,
+      "h": 26,
+      "fill": "#BCA6E0",
+      "stroke": "#9A87C9",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "fused-tokens-2",
+      "type": "roundrect",
+      "x": 1408,
+      "y": 626,
+      "w": 20,
+      "h": 26,
+      "fill": "#BCA6E0",
+      "stroke": "#9A87C9",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "fused-tokens-3",
+      "type": "roundrect",
+      "x": 1433,
+      "y": 626,
+      "w": 20,
+      "h": 26,
+      "fill": "#BCA6E0",
+      "stroke": "#9A87C9",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "fused-tokens-4",
+      "type": "roundrect",
+      "x": 1458,
+      "y": 626,
+      "w": 20,
+      "h": 26,
+      "fill": "#BCA6E0",
+      "stroke": "#9A87C9",
+      "strokeWidth": 1.6,
+      "radius": 3,
+      "z": 10
+    },
+    {
+      "id": "fused-label",
+      "type": "text",
+      "text": "Fused representation",
+      "x": 1284,
+      "y": 656,
+      "w": 231,
+      "h": 30,
+      "fontSize": 18,
+      "bold": false,
+      "align": "center",
+      "color": "#607185",
+      "z": 40
+    },
+    {
+      "id": "task-head",
+      "type": "roundrect",
+      "x": 1587,
+      "y": 319,
+      "w": 156,
+      "h": 87,
+      "fill": "#FFF5DF",
+      "stroke": "#D7AB55",
+      "strokeWidth": 1.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "task-head-label",
+      "type": "text",
+      "text": "Task head",
+      "x": 1597,
+      "y": 344,
+      "w": 136,
+      "h": 35,
+      "fontSize": 26,
+      "bold": true,
+      "align": "center",
+      "color": "#243448",
+      "z": 40
+    },
+    {
+      "id": "output-class",
+      "type": "roundrect",
+      "x": 1596,
+      "y": 467,
+      "w": 148,
+      "h": 48,
+      "fill": "#FFF7E6",
+      "stroke": "#D7AB55",
+      "strokeWidth": 1.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "output-class-label",
+      "type": "text",
+      "text": "Class",
+      "x": 1604,
+      "y": 473,
+      "w": 132,
+      "h": 35,
+      "fontSize": 23,
+      "bold": true,
+      "align": "center",
+      "color": "#243448",
+      "z": 40
+    },
+    {
+      "id": "output-region",
+      "type": "roundrect",
+      "x": 1596,
+      "y": 528,
+      "w": 148,
+      "h": 48,
+      "fill": "#FFF7E6",
+      "stroke": "#D7AB55",
+      "strokeWidth": 1.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "output-region-label",
+      "type": "text",
+      "text": "Region",
+      "x": 1604,
+      "y": 534,
+      "w": 132,
+      "h": 35,
+      "fontSize": 23,
+      "bold": true,
+      "align": "center",
+      "color": "#243448",
+      "z": 40
+    },
+    {
+      "id": "output-score",
+      "type": "roundrect",
+      "x": 1596,
+      "y": 589,
+      "w": 148,
+      "h": 48,
+      "fill": "#FFF7E6",
+      "stroke": "#D7AB55",
+      "strokeWidth": 1.6,
+      "radius": 12,
+      "z": 10
+    },
+    {
+      "id": "output-score-label",
+      "type": "text",
+      "text": "Score",
+      "x": 1604,
+      "y": 595,
+      "w": 132,
+      "h": 35,
+      "fontSize": 23,
+      "bold": true,
+      "align": "center",
+      "color": "#243448",
+      "z": 40
+    }
+  ],
+  "edges": [
+    {
+      "id": "patch-vertical-85",
+      "points": [
+        [
+          85,
+          217
+        ],
+        [
+          85,
+          313
+        ]
+      ],
+      "stroke": "#FFFFFF",
+      "strokeWidth": 1.3,
+      "arrow": false,
+      "z": 25
+    },
+    {
+      "id": "patch-vertical-125",
+      "points": [
+        [
+          125,
+          217
+        ],
+        [
+          125,
+          313
+        ]
+      ],
+      "stroke": "#FFFFFF",
+      "strokeWidth": 1.3,
+      "arrow": false,
+      "z": 25
+    },
+    {
+      "id": "patch-horizontal-249",
+      "points": [
+        [
+          45,
+          249
+        ],
+        [
+          165,
+          249
+        ]
+      ],
+      "stroke": "#FFFFFF",
+      "strokeWidth": 1.3,
+      "arrow": false,
+      "z": 25
+    },
+    {
+      "id": "patch-horizontal-281",
+      "points": [
+        [
+          45,
+          281
+        ],
+        [
+          165,
+          281
+        ]
+      ],
+      "stroke": "#FFFFFF",
+      "strokeWidth": 1.3,
+      "arrow": false,
+      "z": 25
+    },
+    {
+      "id": "image-to-vision",
+      "points": [
+        [
+          165,
+          265
+        ],
+        [
+          210,
+          265
+        ]
+      ],
+      "stroke": "#475C72",
+      "strokeWidth": 2.2,
+      "arrow": true,
+      "z": 25
+    },
+    {
+      "id": "vision-to-tokens",
+      "points": [
+        [
+          347,
+          265
+        ],
+        [
+          374,
+          265
+        ]
+      ],
+      "stroke": "#475C72",
+      "strokeWidth": 2.2,
+      "arrow": true,
+      "z": 25
+    },
+    {
+      "id": "input-to-text",
+      "points": [
+        [
+          165,
+          526
+        ],
+        [
+          210,
+          526
+        ]
+      ],
+      "stroke": "#475C72",
+      "strokeWidth": 2.2,
+      "arrow": true,
+      "z": 25
+    },
+    {
+      "id": "text-to-tokens",
+      "points": [
+        [
+          347,
+          526
+        ],
+        [
+          374,
+          526
+        ]
+      ],
+      "stroke": "#475C72",
+      "strokeWidth": 2.2,
+      "arrow": true,
+      "z": 25
+    },
+    {
+      "id": "bank-to-retrieval",
+      "points": [
+        [
+          650,
+          350
+        ],
+        [
+          780,
+          350
+        ],
+        [
+          780,
+          395
+        ],
+        [
+          650,
+          395
+        ],
+        [
+          650,
+          416
+        ]
+      ],
+      "stroke": "#64A99E",
+      "strokeWidth": 2.2,
+      "arrow": true,
+      "z": 25
+    },
+    {
+      "id": "visual-query",
+      "points": [
+        [
+          451,
+          264
+        ],
+        [
+          486,
+          264
+        ],
+        [
+          486,
+          447
+        ],
+        [
+          535,
+          447
+        ]
+      ],
+      "stroke": "#7FA5D0",
+      "strokeWidth": 2.2,
+      "arrow": true,
+      "z": 25
+    },
+    {
+      "id": "retrieval-to-context",
+      "points": [
+        [
+          650,
+          478
+        ],
+        [
+          650,
+          546
+        ]
+      ],
+      "stroke": "#64A99E",
+      "strokeWidth": 2.2,
+      "arrow": true,
+      "z": 25
+    },
+    {
+      "id": "visual-to-q",
+      "points": [
+        [
+          451,
+          264
+        ],
+        [
+          486,
+          264
+        ],
+        [
+          486,
+          151
+        ],
+        [
+          909,
+          151
+        ],
+        [
+          909,
+          223
+        ]
+      ],
+      "stroke": "#7FA5D0",
+      "strokeWidth": 2.2,
+      "arrow": true,
+      "z": 25
+    },
+    {
+      "id": "text-to-q",
+      "points": [
+        [
+          451,
+          526
+        ],
+        [
+          468,
+          526
+        ],
+        [
+          468,
+          655
+        ],
+        [
+          829,
+          655
+        ],
+        [
+          829,
+          282
+        ],
+        [
+          849,
+          282
+        ]
+      ],
+      "stroke": "#9A87C9",
+      "strokeWidth": 2.2,
+      "arrow": true,
+      "z": 25
+    },
+    {
+      "id": "context-to-k",
+      "points": [
+        [
+          730,
+          571
+        ],
+        [
+          808,
+          571
+        ],
+        [
+          808,
+          452
+        ],
+        [
+          849,
+          452
+        ]
+      ],
+      "stroke": "#64A99E",
+      "strokeWidth": 2.2,
+      "arrow": true,
+      "z": 25
+    },
+    {
+      "id": "context-to-v",
+      "points": [
+        [
+          808,
+          571
+        ],
+        [
+          849,
+          571
+        ]
+      ],
+      "stroke": "#64A99E",
+      "strokeWidth": 2.2,
+      "arrow": true,
+      "z": 25
+    },
+    {
+      "id": "q-to-attention",
+      "points": [
+        [
+          968,
+          282
+        ],
+        [
+          1027,
+          282
+        ]
+      ],
+      "stroke": "#7FA5D0",
+      "strokeWidth": 2.2,
+      "arrow": true,
+      "z": 25
+    },
+    {
+      "id": "k-to-attention",
+      "points": [
+        [
+          968,
+          452
+        ],
+        [
+          983,
+          452
+        ],
+        [
+          983,
+          371
+        ],
+        [
+          1032,
+          371
+        ]
+      ],
+      "stroke": "#64A99E",
+      "strokeWidth": 2.2,
+      "arrow": true,
+      "z": 25
+    },
+    {
+      "id": "attention-to-product",
+      "points": [
+        [
+          1177,
+          387
+        ],
+        [
+          1177,
+          480
+        ]
+      ],
+      "stroke": "#9A87C9",
+      "strokeWidth": 2.2,
+      "arrow": true,
+      "z": 25
+    },
+    {
+      "id": "v-to-product",
+      "points": [
+        [
+          968,
+          571
+        ],
+        [
+          1074,
+          571
+        ],
+        [
+          1074,
+          502
+        ],
+        [
+          1155,
+          502
+        ]
+      ],
+      "stroke": "#64A99E",
+      "strokeWidth": 2.2,
+      "arrow": true,
+      "z": 25
+    },
+    {
+      "id": "product-to-attended",
+      "points": [
+        [
+          1199,
+          502
+        ],
+        [
+          1288,
+          502
+        ],
+        [
+          1288,
+          320
+        ],
+        [
+          1300,
+          320
+        ]
+      ],
+      "stroke": "#9A87C9",
+      "strokeWidth": 2.2,
+      "arrow": true,
+      "z": 25
+    },
+    {
+      "id": "attended-to-residual",
+      "points": [
+        [
+          1360,
+          344
+        ],
+        [
+          1360,
+          441
+        ],
+        [
+          1271,
+          441
+        ],
+        [
+          1271,
+          558
+        ]
+      ],
+      "stroke": "#9A87C9",
+      "strokeWidth": 2.2,
+      "arrow": true,
+      "z": 25
+    },
+    {
+      "id": "visual-residual",
+      "points": [
+        [
+          451,
+          264
+        ],
+        [
+          474,
+          264
+        ],
+        [
+          474,
+          716
+        ],
+        [
+          1271,
+          716
+        ],
+        [
+          1271,
+          600
+        ]
+      ],
+      "stroke": "#7FA5D0",
+      "strokeWidth": 2.2,
+      "arrow": true,
+      "z": 25
+    },
+    {
+      "id": "add-to-feedforward",
+      "points": [
+        [
+          1292,
+          579
+        ],
+        [
+          1330,
+          579
+        ]
+      ],
+      "stroke": "#9A87C9",
+      "strokeWidth": 2.2,
+      "arrow": true,
+      "z": 25
+    },
+    {
+      "id": "ff-to-fused",
+      "points": [
+        [
+          1415,
+          612
+        ],
+        [
+          1415,
+          622
+        ]
+      ],
+      "stroke": "#9A87C9",
+      "strokeWidth": 2.2,
+      "arrow": true,
+      "z": 25
+    },
+    {
+      "id": "fused-to-task",
+      "points": [
+        [
+          1480,
+          639
+        ],
+        [
+          1539,
+          639
+        ],
+        [
+          1539,
+          362
+        ],
+        [
+          1587,
+          362
+        ]
+      ],
+      "stroke": "#9A87C9",
+      "strokeWidth": 2.2,
+      "arrow": true,
+      "z": 25
+    },
+    {
+      "id": "task-trunk",
+      "points": [
+        [
+          1665,
+          406
+        ],
+        [
+          1665,
+          445
+        ],
+        [
+          1573,
+          445
+        ],
+        [
+          1573,
+          616
+        ]
+      ],
+      "stroke": "#D7AB55",
+      "strokeWidth": 2.2,
+      "arrow": false,
+      "z": 25
+    },
+    {
+      "id": "head-to-class",
+      "points": [
+        [
+          1573,
+          491
+        ],
+        [
+          1596,
+          491
+        ]
+      ],
+      "stroke": "#D7AB55",
+      "strokeWidth": 2.2,
+      "arrow": true,
+      "z": 25
+    },
+    {
+      "id": "head-to-region",
+      "points": [
+        [
+          1573,
+          552
+        ],
+        [
+          1596,
+          552
+        ]
+      ],
+      "stroke": "#D7AB55",
+      "strokeWidth": 2.2,
+      "arrow": true,
+      "z": 25
+    },
+    {
+      "id": "head-to-score",
+      "points": [
+        [
+          1573,
+          613
+        ],
+        [
+          1596,
+          613
+        ]
+      ],
+      "stroke": "#D7AB55",
+      "strokeWidth": 2.2,
+      "arrow": true,
+      "z": 25
+    }
+  ],
+  "notes": "Fictional workflow demonstration. No experimental values or published-method claims. Reference grammar: memory slot arrays, token strips, nested attention mechanisms, fine connectors, semantic pastel colors. All objects are editable vectors; there are no photographs or raster screenshots."
+}

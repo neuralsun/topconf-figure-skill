@@ -1,0 +1,3 @@
+# Optional: tracing selected illustration/icon regions into native Bezier curves.
+vtracer>=0.6,<1
+svgpathtools>=1.6,<2

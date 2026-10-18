@@ -1,0 +1,19 @@
+{
+  "editable_native_shapes": 161,
+  "editable_text_runs": 35,
+  "native_connector_segments": 58,
+  "raster_pictures": 0,
+  "svg_pptx_labels_identical": true,
+  "warnings": [],
+  "node_types": {
+    "roundrect": 52,
+    "text": 32,
+    "rect": 37,
+    "ellipse": 3,
+    "polygon": 37
+  },
+  "limitations": [
+    "PPTX text and geometry are native; visual rendering in desktop Office has not been checked by this script.",
+    "Check overlap, arrow routing, semantics, and final-size readability visually."
+  ]
+}

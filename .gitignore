@@ -1,0 +1,28 @@
+# Machine-specific settings and credentials
+config.local.json
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python / local runtimes
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+node_modules/
+
+# Personal inputs and generated work
+output/
+outputs/
+tmp/
+temp/
+private/
+local/
+topconf-gallery/
+*.log
+~$*
+.DS_Store
+Thumbs.db

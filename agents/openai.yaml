@@ -1,0 +1,4 @@
+interface:
+  display_name: "顶会架构图工作室"
+  short_description: "参考顶会视觉语法，用内置生图和原生对象导出可编辑PPT、SVG和PNG"
+  default_prompt: "使用 $topconf-figure，先优化提示词，生成并验收设计图，再逐对象转换为可编辑 PPTX、SVG 和 PNG；不加外部标题和图注，检查不通过就重新设计或转换。"

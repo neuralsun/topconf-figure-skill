@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="500" viewBox="0 0 1440 500" role="img" aria-labelledby="title desc">
+  <title id="title">TopConf Figure</title>
+  <desc id="desc">Design-first conference-paper figures. Read, design, reconstruct, and export editable PPTX, SVG and PNG.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#071627"/><stop offset="1" stop-color="#10354A"/></linearGradient>
+    <linearGradient id="accent"><stop stop-color="#5EEAD4"/><stop offset="1" stop-color="#67C9FF"/></linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#B6EBFF" stroke-opacity=".055"/></pattern>
+    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L8 4L0 8" fill="#70DCCF"/></marker>
+  </defs>
+  <rect width="1440" height="500" rx="24" fill="url(#bg)"/>
+  <rect width="1440" height="500" rx="24" fill="url(#grid)"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="64" y="55" width="208" height="30" rx="15" fill="#123E49" stroke="#4BD4C5" stroke-opacity=".4"/>
+    <circle cx="81" cy="70" r="4" fill="#5EEAD4"/>
+    <text x="95" y="75" fill="#B4FFF0" font-size="12" letter-spacing="1.8">A CODEX FIGURE SKILL</text>
+    <text x="64" y="161" fill="#F5FAFF" font-size="63" font-weight="700" letter-spacing="-2">TopConf<tspan dx="14" fill="url(#accent)">Figure</tspan></text>
+    <text x="66" y="202" fill="#A6BBCD" font-size="20">Paper-specific design. Object-level editing.</text>
+    <text x="66" y="233" fill="#A6BBCD" font-size="20">One scene. Three deliverables.</text>
+    <path d="M66 265H213" stroke="url(#accent)" stroke-width="3"/>
+    <text x="65" y="306" fill="#DCEAF5" font-size="14" letter-spacing="2.2">DESIGN FIRST. EDIT EVERY OBJECT.</text>
+    <g font-size="13" font-weight="700">
+      <rect x="66" y="337" width="76" height="30" rx="7" fill="#123E49" stroke="#327B7A"/><text x="104" y="357" text-anchor="middle" fill="#8FF5DF">PPTX</text>
+      <rect x="154" y="337" width="76" height="30" rx="7" fill="#17344E" stroke="#386E9B"/><text x="192" y="357" text-anchor="middle" fill="#91D9FF">SVG</text>
+      <rect x="242" y="337" width="76" height="30" rx="7" fill="#28304C" stroke="#69618F"/><text x="280" y="357" text-anchor="middle" fill="#D5C7FF">PNG</text>
+    </g>
+    <text x="65" y="440" fill="#7795AA" font-size="12" letter-spacing="1.3">REFERENCE-GUIDED · NATIVE VECTORS · REVIEW GATES</text>
+    <g transform="translate(705 63)">
+      <rect width="659" height="367" rx="17" fill="#10283A" stroke="#355669"/>
+      <circle cx="22" cy="22" r="4" fill="#FF9D70"/><circle cx="37" cy="22" r="4" fill="#E2C978"/><circle cx="52" cy="22" r="4" fill="#65CFB3"/>
+      <text x="329" y="27" text-anchor="middle" fill="#9FB6C9" font-size="11" letter-spacing="1.4">FROM METHOD TO EDITABLE FIGURE</text>
+      <path d="M0 43H659" stroke="#355669"/>
+      <rect x="28" y="87" width="116" height="111" rx="10" fill="#183D50" stroke="#548FA6"/>
+      <path d="M50 110H99L118 129V173H50Z M99 110V129H118 M62 140H104 M62 151H104 M62 162H91" fill="none" stroke="#A2D7E3" stroke-width="2"/>
+      <text x="86" y="222" text-anchor="middle" fill="#BCD1E0" font-size="12">Read the method</text>
+      <path d="M151 145H187" stroke="#70DCCF" stroke-width="2" marker-end="url(#arrow)"/>
+      <rect x="198" y="86" width="184" height="112" rx="11" fill="#153E45" stroke="#64D6C2"/>
+      <rect x="215" y="104" width="55" height="29" rx="5" fill="#245B60" stroke="#64D6C2"/>
+      <rect x="307" y="104" width="55" height="29" rx="5" fill="#245B60" stroke="#64D6C2"/>
+      <rect x="259" y="155" width="63" height="27" rx="5" fill="#245B60" stroke="#64D6C2"/>
+      <path d="M270 118H299 M243 134V169H251 M335 134V169H330" stroke="#80E0D1" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+      <text x="290" y="222" text-anchor="middle" fill="#D7FFF4" font-size="12">Design + review</text>
+      <path d="M388 145H425" stroke="#70DCCF" stroke-width="2" marker-end="url(#arrow)"/>
+      <g fill="#183950" stroke="#6FABD3">
+        <rect x="436" y="86" width="189" height="112" rx="10"/>
+        <rect x="455" y="106" width="64" height="28" rx="4"/>
+        <rect x="546" y="106" width="61" height="28" rx="4"/>
+        <rect x="476" y="158" width="105" height="22" rx="4"/>
+      </g>
+      <path d="M522 120H540 M488 139V153 M575 139V153" stroke="#9BD7F6" fill="none" stroke-width="1.5" marker-end="url(#arrow)"/>
+      <g fill="#ECF7FF" stroke="#71C0E6" stroke-width="1"><rect x="451" y="102" width="6" height="6"/><rect x="516" y="131" width="6" height="6"/><rect x="542" y="102" width="6" height="6"/><rect x="604" y="131" width="6" height="6"/></g>
+      <text x="530" y="222" text-anchor="middle" fill="#D8ECFB" font-size="12">Rebuild native objects</text>
+      <path d="M289 245V265H513" stroke="#4F8C9E" fill="none" stroke-width="1.5"/>
+      <g font-size="12" font-weight="700" text-anchor="middle">
+        <rect x="215" y="278" width="98" height="39" rx="8" fill="#144B49" stroke="#5EBFAF"/><text x="264" y="302" fill="#A4F8DD">.PPTX</text>
+        <rect x="332" y="278" width="98" height="39" rx="8" fill="#1C425E" stroke="#69AACC"/><text x="381" y="302" fill="#A7DEFF">.SVG</text>
+        <rect x="449" y="278" width="98" height="39" rx="8" fill="#343956" stroke="#8F89BC"/><text x="498" y="302" fill="#D8D0FF">.PNG</text>
+      </g>
+      <text x="329" y="344" text-anchor="middle" fill="#8DAABD" font-size="11">Shared scene JSON + inspectable quality reports</text>
+    </g>
+  </g>
+</svg>
